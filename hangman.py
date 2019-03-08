@@ -3,7 +3,6 @@ import random
 d = {}
 remGuess=6
 inp=''
-position=[]
 picks=''
 
 def replacer(s, newstring, index, nofail=False):
@@ -38,11 +37,10 @@ while(remGuess!=0):
             position = [pos for pos, char in enumerate(word) if char == inp]
             for i in range(len(position)):
                 strn=replacer(strn,inp,position[i])
-
+            print("word:",strn,"picks:",picks,"remaining:",remGuess)
             if (strn==word):
                 print("YOU WIN!!")
                 break
-            print("word:",strn,"picks:",picks,"remaining:",remGuess)
             count=count+1
         else:
             remGuess-=1
