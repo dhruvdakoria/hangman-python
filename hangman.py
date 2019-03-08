@@ -49,3 +49,5 @@ while(remGuess!=0):
             picks+=inp
             print("word:",strn,"picks:",picks,"remaining:",remGuess)
             count=count+1
+            if remGuess==0:
+                print("No more attempts remaining!!")
